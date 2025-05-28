@@ -6,6 +6,7 @@
   <meta name="description" content="Iman Mousaei – Academic & Epidemiology Portfolio" />
   <title>Iman Mousaei | Academic Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     const toggleLang = () => {
@@ -17,84 +18,9 @@
     };
   </script>
 </head>
-<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">Iman Mousaei</h1>
-      <nav class="space-x-4">
-        <button onclick="toggleLang()" class="text-sm text-blue-600 underline">EN/FA</button>
-        <a href="#about" class="hover:text-blue-600" data-en="About" data-fa="درباره من">About</a>
-        <a href="#education" class="hover:text-blue-600" data-en="Education" data-fa="تحصیلات">Education</a>
-        <a href="#publications" class="hover:text-blue-600" data-en="Publications" data-fa="مقالات">Publications</a>
-        <a href="#projects" class="hover:text-blue-600" data-en="Projects" data-fa="پروژه‌ها">Projects</a>
-        <a href="#contact" class="hover:text-blue-600" data-en="Contact" data-fa="تماس">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-4 py-8">
-    <section class="flex flex-col md:flex-row items-center mb-8">
-      <img src="profile.jpg.jpg" alt="Iman Mousaei" class="w-48 h-48 rounded-full shadow-md mb-4 md:mb-0 md:mr-8" />
-      <div>
-        <h2 class="text-2xl font-semibold" data-en="Welcome to my academic profile" data-fa="به صفحه علمی من خوش آمدید">Welcome to my academic profile</h2>
-        <p class="mt-2" data-en="Epidemiologist & Researcher" data-fa="اپیدمیولوژیست و پژوهشگر">Epidemiologist & Researcher</p>
-        <p class="text-sm text-gray-500 mt-1">Last updated: <span id="update-date"></span></p>
-      </div>
-    </section>
-
-    <section id="about" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="About Me" data-fa="درباره من">About Me</h3>
-      <p data-en="Master's in Epidemiology. Over 10 years of experience in public health and disease control. Passionate about data analysis and scientific research." 
-         data-fa="کارشناس ارشد اپیدمیولوژی با بیش از ۱۰ سال سابقه در بهداشت عمومی و کنترل بیماری‌ها. علاقه‌مند به تحلیل داده‌ها و پژوهش‌های علمی.">
-        Master's in Epidemiology. Over 10 years of experience in public health and disease control.
-      </p>
-    </section>
-
-    <section id="education" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Education" data-fa="تحصیلات">Education</h3>
-      <ul class="list-disc ml-6">
-        <li data-en="MSc in Epidemiology – Mashhad University of Medical Sciences (2021–2025)" 
-            data-fa="کارشناسی ارشد اپیدمیولوژی – دانشگاه علوم پزشکی مشهد (۱۴۰۱–۱۴۰۴)">MSc in Epidemiology – Mashhad University of Medical Sciences (2021–2025)</li>
-        <li data-en="BSc in Public Health – Birjand University of Medical Sciences (2013–2015)" 
-            data-fa="کارشناسی بهداشت عمومی – دانشگاه علوم پزشکی بیرجند (۱۳۹۳–۱۳۹۵)">BSc in Public Health – Birjand University of Medical Sciences (2013–2015)</li>
-      </ul>
-    </section>
-
-    <section id="publications" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Selected Publications" data-fa="منتخب مقالات">Selected Publications</h3>
-      <ul class="list-disc ml-6 text-sm">
-        <li>Food Insecurity and Breast Cancer – J Research Health, 2025</li>
-        <li>Hospital Service Quality in Afghanistan – J Research Health, 2025</li>
-        <li>Mental Health and Cardiovascular Events – Springer SNAPP, 2025</li>
-        <li><a href="https://scholar.google.com/citations?user=p-RJw1MAAAAJ" class="text-blue-600 underline">More on Google Scholar</a></li>
-      </ul>
-      <canvas id="pubChart" width="400" height="200" class="mt-4"></canvas>
-    </section>
-
-    <section id="projects" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Selected Projects" data-fa="پروژه‌های منتخب">Selected Projects</h3>
-      <ul class="list-disc ml-6 text-sm">
-        <li>Epidemiological study of fatty liver markers – Birjand Hospital, 2024</li>
-        <li>Traditional treatments and family beliefs – Birjand Demographic Research Base, 2008</li>
-        <li>Brucellosis trends in Birjand – 2009</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Contact" data-fa="تماس">Contact</h3>
-      <p>Email: <a href="mailto:iman.mse@gmail.com" class="text-blue-600">iman.mse@gmail.com</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=p-RJw1MAAAAJ" class="text-blue-600">Profile</a></p>
-      <p>ResearchGate: <a href="https://www.researchgate.net/profile/Iman-Mousaei-2/research" class="text-blue-600">Profile</a></p>
-      <form action="https://formspree.io/f/mjvnknpv" method="POST" class="mt-4">
-        <input type="text" name="name" placeholder="Name" class="block w-full p-2 border mb-2" required>
-        <input type="email" name="email" placeholder="Email" class="block w-full p-2 border mb-2" required>
-        <textarea name="message" placeholder="Message" class="block w-full p-2 border mb-2" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="bg-gray-200 text-center p-4 text-sm">
+<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-100 text-gray-800 font-sans">
+  <!-- full body content goes here -->
+  <footer class="bg-pink-100 text-center p-4 text-sm text-gray-700">
     &copy; <span id="year"></span> Iman Mousaei. All rights reserved.
   </footer>
 
@@ -111,7 +37,7 @@
           datasets: [{
             label: 'Publications per Year',
             data: [1, 1, 3, 1, 4],
-            backgroundColor: 'rgba(37, 99, 235, 0.7)',
+            backgroundColor: 'rgba(236, 72, 153, 0.7)',
           }]
         },
         options: {
