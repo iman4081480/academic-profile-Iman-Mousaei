@@ -6,6 +6,7 @@
   <meta name="description" content="Iman Mousaei – Academic & Epidemiology Portfolio" />
   <title>Iman Mousaei | Academic Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     const toggleLang = () => {
@@ -17,84 +18,95 @@
     };
   </script>
 </head>
-<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
-  <header class="bg-white shadow-md sticky top-0 z-50">
+<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-100 text-gray-800 font-sans">
+  <header class="bg-white shadow-lg sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">Iman Mousaei</h1>
-      <nav class="space-x-4">
-        <button onclick="toggleLang()" class="text-sm text-blue-600 underline">EN/FA</button>
-        <a href="#about" class="hover:text-blue-600" data-en="About" data-fa="درباره من">About</a>
-        <a href="#education" class="hover:text-blue-600" data-en="Education" data-fa="تحصیلات">Education</a>
-        <a href="#publications" class="hover:text-blue-600" data-en="Publications" data-fa="مقالات">Publications</a>
-        <a href="#projects" class="hover:text-blue-600" data-en="Projects" data-fa="پروژه‌ها">Projects</a>
-        <a href="#contact" class="hover:text-blue-600" data-en="Contact" data-fa="تماس">Contact</a>
+      <h1 class="text-2xl font-bold text-blue-700 flex items-center gap-2">
+        <i class="fas fa-user-graduate text-pink-500"></i> Iman Mousaei
+      </h1>
+      <nav class="flex gap-4 text-sm font-semibold">
+        <button onclick="toggleLang()" class="text-blue-600 underline">EN/FA</button>
+        <a href="#about" class="hover:text-pink-600" data-en="About" data-fa="درباره من">About</a>
+        <a href="#education" class="hover:text-pink-600" data-en="Education" data-fa="تحصیلات">Education</a>
+        <a href="#publications" class="hover:text-pink-600" data-en="Publications" data-fa="مقالات">Publications</a>
+        <a href="#projects" class="hover:text-pink-600" data-en="Projects" data-fa="پروژه‌ها">Projects</a>
+        <a href="#contact" class="hover:text-pink-600" data-en="Contact" data-fa="تماس">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto px-4 py-8">
-    <section class="flex flex-col md:flex-row items-center mb-8">
-      <img src="profile.jpg.jpg" alt="Iman Mousaei" class="w-48 h-48 rounded-full shadow-md mb-4 md:mb-0 md:mr-8" />
+  <main class="container mx-auto px-4 py-10">
+    <section class="flex flex-col md:flex-row items-center mb-12">
+      <div class="mb-4 md:mb-0 md:mr-10">
+        <a href="resume-iman-mousaei.pdf" download class="inline-flex items-center bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">
+          <i class="fas fa-file-download mr-2"></i>
+          <span data-en="Download CV" data-fa="دانلود رزومه">Download CV</span>
+        </a>
+      </div>
+      <img src="profile.jpg.jpg" alt="Iman Mousaei" class="w-48 h-48 rounded-full border-4 border-pink-300 shadow-lg mb-6 md:mb-0 md:mr-10" />
       <div>
-        <h2 class="text-2xl font-semibold" data-en="Welcome to my academic profile" data-fa="به صفحه علمی من خوش آمدید">Welcome to my academic profile</h2>
-        <p class="mt-2" data-en="Epidemiologist & Researcher" data-fa="اپیدمیولوژیست و پژوهشگر">Epidemiologist & Researcher</p>
-        <p class="text-sm text-gray-500 mt-1">Last updated: <span id="update-date"></span></p>
+        <h2 class="text-3xl font-bold text-blue-800 mb-2" data-en="Welcome to my academic profile" data-fa="به صفحه علمی من خوش آمدید">Welcome to my academic profile</h2>
+        <p class="text-lg text-pink-700 mb-1" data-en="Epidemiologist & Researcher" data-fa="اپیدمیولوژیست و پژوهشگر">Epidemiologist & Researcher</p>
+        <p class="text-sm text-gray-600">Last updated: <span id="update-date"></span></p>
       </div>
     </section>
 
-    <section id="about" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="About Me" data-fa="درباره من">About Me</h3>
-      <p data-en="Master's in Epidemiology. Over 10 years of experience in public health and disease control. Passionate about data analysis and scientific research." 
-         data-fa="کارشناس ارشد اپیدمیولوژی با بیش از ۱۰ سال سابقه در بهداشت عمومی و کنترل بیماری‌ها. علاقه‌مند به تحلیل داده‌ها و پژوهش‌های علمی.">
+    <section id="about" class="mb-10">
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3 flex items-center gap-2"><i class="fas fa-info-circle text-pink-500"></i> <span data-en="About Me" data-fa="درباره من">About Me</span></h3>
+      <p class="text-md leading-relaxed" data-en="Master's in Epidemiology. Over 10 years of experience in public health and disease control. Passionate about data analysis and scientific research. Member of the Iranian Epidemiological Association." data-fa="کارشناس ارشد اپیدمیولوژی با بیش از ۱۰ سال سابقه در بهداشت عمومی و کنترل بیماری‌ها. علاقه‌مند به تحلیل داده‌ها و پژوهش‌های علمی. عضو انجمن اپیدمیولوژی ایران.">
         Master's in Epidemiology. Over 10 years of experience in public health and disease control.
       </p>
     </section>
 
-    <section id="education" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Education" data-fa="تحصیلات">Education</h3>
-      <ul class="list-disc ml-6">
-        <li data-en="MSc in Epidemiology – Mashhad University of Medical Sciences (2021–2025)" 
-            data-fa="کارشناسی ارشد اپیدمیولوژی – دانشگاه علوم پزشکی مشهد (۱۴۰۱–۱۴۰۴)">MSc in Epidemiology – Mashhad University of Medical Sciences (2021–2025)</li>
-        <li data-en="BSc in Public Health – Birjand University of Medical Sciences (2013–2015)" 
-            data-fa="کارشناسی بهداشت عمومی – دانشگاه علوم پزشکی بیرجند (۱۳۹۳–۱۳۹۵)">BSc in Public Health – Birjand University of Medical Sciences (2013–2015)</li>
+    <section id="education" class="mb-10">
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3 flex items-center gap-2"><i class="fas fa-graduation-cap text-pink-500"></i> <span data-en="Education" data-fa="تحصیلات">Education</span></h3>
+      <ul class="list-disc ml-6 space-y-2">
+        <li data-en="MSc in Epidemiology – Mashhad University of Medical Sciences (2021–2025)" data-fa="کارشناسی ارشد اپیدمیولوژی – دانشگاه علوم پزشکی مشهد (۱۴۰۱–۱۴۰۴)">MSc in Epidemiology – Mashhad University of Medical Sciences (2021–2025)</li>
+        <li data-en="BSc in Public Health – Birjand University of Medical Sciences (2013–2015)" data-fa="کارشناسی بهداشت عمومی – دانشگاه علوم پزشکی بیرجند (۱۳۹۳–۱۳۹۵)">BSc in Public Health – Birjand University of Medical Sciences (2013–2015)</li>
       </ul>
     </section>
 
-    <section id="publications" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Selected Publications" data-fa="منتخب مقالات">Selected Publications</h3>
-      <ul class="list-disc ml-6 text-sm">
+    <section id="publications" class="mb-10">
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3 flex items-center gap-2"><i class="fas fa-book text-pink-500"></i> <span data-en="Selected Publications" data-fa="منتخب مقالات">Selected Publications</span></h3>
+      <ul class="list-disc ml-6 text-sm space-y-1">
         <li>Food Insecurity and Breast Cancer – J Research Health, 2025</li>
         <li>Hospital Service Quality in Afghanistan – J Research Health, 2025</li>
         <li>Mental Health and Cardiovascular Events – Springer SNAPP, 2025</li>
         <li><a href="https://scholar.google.com/citations?user=p-RJw1MAAAAJ" class="text-blue-600 underline">More on Google Scholar</a></li>
       </ul>
-      <canvas id="pubChart" width="400" height="200" class="mt-4"></canvas>
+      <canvas id="pubChart" width="400" height="200" class="mt-6"></canvas>
     </section>
 
-    <section id="projects" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Selected Projects" data-fa="پروژه‌های منتخب">Selected Projects</h3>
-      <ul class="list-disc ml-6 text-sm">
+    <section id="projects" class="mb-10">
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3 flex items-center gap-2"><i class="fas fa-lightbulb text-pink-500"></i> <span data-en="Selected Projects" data-fa="پروژه‌های منتخب">Selected Projects</span></h3>
+      <ul class="list-disc ml-6 text-sm space-y-1">
         <li>Epidemiological study of fatty liver markers – Birjand Hospital, 2024</li>
         <li>Traditional treatments and family beliefs – Birjand Demographic Research Base, 2008</li>
         <li>Brucellosis trends in Birjand – 2009</li>
       </ul>
     </section>
 
-    <section id="contact" class="mb-8">
-      <h3 class="text-xl font-semibold mb-2" data-en="Contact" data-fa="تماس">Contact</h3>
-      <p>Email: <a href="mailto:iman.mse@gmail.com" class="text-blue-600">iman.mse@gmail.com</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=p-RJw1MAAAAJ" class="text-blue-600">Profile</a></p>
-      <p>ResearchGate: <a href="https://www.researchgate.net/profile/Iman-Mousaei-2/research" class="text-blue-600">Profile</a></p>
-      <form action="https://formspree.io/f/mjvnknpv" method="POST" class="mt-4">
-        <input type="text" name="name" placeholder="Name" class="block w-full p-2 border mb-2" required>
-        <input type="email" name="email" placeholder="Email" class="block w-full p-2 border mb-2" required>
-        <textarea name="message" placeholder="Message" class="block w-full p-2 border mb-2" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2">Send</button>
+    <section id="contact" class="mb-10">
+      <div class="mb-6">
+        <a href="resume-iman-mousaei.pdf" download class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <i class="fas fa-file-download mr-2"></i>
+          <span data-en="Download CV" data-fa="دانلود رزومه">Download CV</span>
+        </a>
+      </div>
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3 flex items-center gap-2"><i class="fas fa-envelope text-pink-500"></i> <span data-en="Contact" data-fa="تماس">Contact</span></h3>
+      <p class="mb-1">📧 <a href="mailto:iman.mse@gmail.com" class="text-blue-600">iman.mse@gmail.com</a></p>
+      <p class="mb-1">🔗 <a href="https://scholar.google.com/citations?user=p-RJw1MAAAAJ" class="text-blue-600">Google Scholar</a></p>
+      <p class="mb-4">🔗 <a href="https://www.researchgate.net/profile/Iman-Mousaei-2/research" class="text-blue-600">ResearchGate</a></p>
+      <form action="https://formspree.io/f/mjvnknpv" method="POST" class="bg-white p-4 rounded shadow-md space-y-2">
+        <input type="text" name="name" placeholder="Name" class="w-full p-2 border rounded" required>
+        <input type="email" name="email" placeholder="Email" class="w-full p-2 border rounded" required>
+        <textarea name="message" placeholder="Message" class="w-full p-2 border rounded" required></textarea>
+        <button type="submit" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600">Send</button>
       </form>
     </section>
   </main>
 
-  <footer class="bg-gray-200 text-center p-4 text-sm">
+  <footer class="bg-pink-100 text-center p-4 text-sm text-gray-700">
     &copy; <span id="year"></span> Iman Mousaei. All rights reserved.
   </footer>
 
@@ -111,7 +123,7 @@
           datasets: [{
             label: 'Publications per Year',
             data: [1, 1, 3, 1, 4],
-            backgroundColor: 'rgba(37, 99, 235, 0.7)',
+            backgroundColor: 'rgba(236, 72, 153, 0.7)',
           }]
         },
         options: {
