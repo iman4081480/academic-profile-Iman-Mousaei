@@ -248,5 +248,92 @@
       });
     }
   </script>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Iman Mousaei – Academic & Epidemiology Portfolio" />
+  <title>Iman Mousaei | Academic Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const toggleLang = () => {
+      const lang = document.documentElement.lang === "en" ? "fa" : "en";
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-en], [data-fa]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    };
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function updateClock() {
+        const now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleString();
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    });
+  </script>
+</head>
+<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-100 text-gray-800 font-sans">
+  <div id="clock" class="fixed bottom-4 right-4 bg-white text-gray-700 px-3 py-1 rounded shadow text-sm z-50"></div>
+
+  <section id="feedback" class="bg-white mt-10 p-6 shadow-inner rounded max-w-2xl mx-auto">
+    <h3 class="text-xl font-semibold mb-4 text-blue-700">Visitor Feedback</h3>
+    <form action="https://formspree.io/f/mjvnknpv" method="POST" class="space-y-3">
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border rounded" required>
+      <textarea name="feedback" placeholder="Your feedback, questions or suggestions..." class="w-full p-2 border rounded" rows="4" required></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send Feedback</button>
+    </form>
+  </section>
+
+  <div id="visitor-counter" class="fixed bottom-4 left-4 bg-white text-gray-700 px-3 py-1 rounded shadow text-sm z-50">
+    👁️ Today: <span id="todayCount">-</span> | Total: <span id="totalCount">-</span>
+  </div>
+
+  <footer class="bg-pink-100 text-center p-4 text-sm text-gray-700">
+    &copy; <span id="year"></span> Iman Mousaei. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("update-date").textContent = new Date().toLocaleDateString('fa-IR');
+
+    const ctx = document.getElementById('pubChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2017', '2020', '2023', '2024', '2025'],
+          datasets: [{
+            label: 'Publications per Year',
+            data: [1, 1, 3, 1, 4],
+            backgroundColor: 'rgba(236, 72, 153, 0.7)',
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    // Visitor Counter Logic using Firebase (placeholder code)
+    // Replace this section with Firebase SDK integration
+    let total = localStorage.getItem('totalViews') || 0;
+    let today = sessionStorage.getItem('todayViews') || 0;
+    total++;
+    today++;
+    localStorage.setItem('totalViews', total);
+    sessionStorage.setItem('todayViews', today);
+    document.getElementById("totalCount").textContent = total;
+    document.getElementById("todayCount").textContent = today;
+  </script>
+</body>
+</html>
 </body>
 </html>
