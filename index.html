@@ -640,3 +640,170 @@
 </script>
 </body>
 </html>
+<!-- فونت Vazir (فارسی) -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <!-- فونت Google Sans (انگلیسی) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* استایل‌های پایه */
+        body {
+            font-family: 'Vazir', 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            transition: all 0.3s;
+        }
+        [dir="rtl"] body {
+            text-align: right;
+        }
+        [dir="ltr"] body {
+            text-align: left;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* سوئیچر زبان */
+        .lang-switcher {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .lang-switcher button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        /* محتوای مخفی برای زبان‌ها */
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        /* لینک‌های مفید */
+        .useful-links {
+            background: #e7f5ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        /* دکمه بازگشت به بالا */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- سوئیچر زبان -->
+    <div class="lang-switcher">
+        <button onclick="switchLanguage('fa')">فارسی</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <!-- محتوای فارسی -->
+    <div id="fa" class="lang-content active">
+        <div class="container">
+            <header>
+                <h1>ایمان موسائی</h1>
+                <p>مهندس شبکه و طراح وب</p>
+            </header>
+
+            <section>
+                <h2>درباره من</h2>
+                <p>سلام! من ایمان موسائی هستم، متخصص در زمینه طراحی وب و مهندسی شبکه.</p>
+            </section>
+
+            <div class="useful-links">
+                <h3>لینک‌های مفید</h3>
+                <h4>سازمان‌های جهانی</h4>
+                <ul>
+                    <li><a href="https://www.who.int" target="_blank" rel="noopener">سازمان جهانی بهداشت (WHO)</a></li>
+                </ul>
+                <h4>مراکز تحقیقاتی ایران</h4>
+                <ul>
+                    <li><a href="https://www.pasteur.ac.ir" target="_blank" rel="noopener">انستیتو پاستور ایران</a></li>
+                    <li><a href="https://www.nrcii.ir" target="_blank" rel="noopener">مرکز تحقیقات علوم اعصاب ایران</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- محتوای انگلیسی -->
+    <div id="en" class="lang-content">
+        <div class="container">
+            <header>
+                <h1>Iman Mousaei</h1>
+                <p>Network Engineer & Web Designer</p>
+            </header>
+
+            <section>
+                <h2>About Me</h2>
+                <p>Hi! I'm Iman Mousaei, specializing in Web Design and Network Engineering.</p>
+            </section>
+          <div class="useful-links">
+                <h3>Useful Links</h3>
+                <h4>International Organizations</h4>
+                <ul>
+                    <li><a href="https://www.who.int" target="_blank" rel="noopener">World Health Organization (WHO)</a></li>
+                </ul>
+                <h4>Iranian Research Centers</h4>
+                <ul>
+                    <li><a href="https://www.pasteur.ac.ir" target="_blank" rel="noopener">Pasteur Institute of Iran</a></li>
+                    <li><a href="https://www.nrcii.ir" target="_blank" rel="noopener">Neuroscience Research Center Iran</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- دکمه بازگشت به بالا -->
+    <button id="backToTop" title="بازگشت به بالا">↑</button>
+
+    <!-- اسکریپت‌ها -->
+    <script>
+        // تغییر زبان
+        function switchLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+            
+            // مخفی کردن تمام محتواها
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // نمایش محتوای انتخاب شده
+            document.getElementById(lang).classList.add('active');
+        }
+
+        // دکمه بازگشت به بالا
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        };
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
