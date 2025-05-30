@@ -200,3 +200,22 @@
     </script>
 </body>
 </html>
+<!-- اضافه کردن در هدر -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+<!-- قبل از بسته شدن body -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+<script>
+    // Lazy loading برای تصاویر
+    new LazyLoad({
+        elements_selector: ".lazy"
+    });
+</script>
+<!-- قبل از بسته شدن head -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
